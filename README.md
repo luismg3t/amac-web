@@ -1,34 +1,45 @@
-# AMAC · Plataforma de empleo — Entrega 2 (HTML y CSS)
+AMAC Proyecto Final Entrega 2 (HTML y CSS)
 
-Proyecto final OT2026-WEB. Maquetación estática del prototipo de Figma, sin frameworks.
+// Integrantes y qué hizo cada uno
 
-## Integrantes y qué hizo cada uno
+Integrantes:
+Luis Mario Cortez Castro - Manejo del código
+Julio Eduardo Gomez Wilson - Gestión de presentación
+Carlos Ignacio Marván Ramirez - Gestión de presentación
+Milton Carlos Leal Tamez - Manejo del código
 
-| Integrante | Trabajo |
-| --- | --- |
-| _Nombre_ | _Qué hizo_ |
 
-## Paleta de colores y tipografías
+// Colores y tipografías
+css/variables.css
 
-Se definen como variables CSS en [`css/variables.css`](css/variables.css), tomadas de Figma.
+--color-primario -- #1f2a4a
+--color-acento -- #ff7f5c -- botón principal y ayuda
+--color-texto -- #1b2440 -- Texto principal
+--color-superficie -- #ebebeb -- Fondo de página
 
-| Variable | Valor | Uso |
-| --- | --- | --- |
-| `--color-primario` | `#1f2a4a` | Azul marino AMAC |
-| `--color-acento` | `#ff7f5c` | Coral AMAC (botón principal y ayuda) |
-| `--color-texto` | `#1b2440` | Texto principal |
-| `--color-superficie` | `#ebebeb` | Fondo de la página |
+Tipografías: Libre Baskerville para títulos
+Inter para texto
+El texto base es de 18px/1.125 rem
 
-Tipografías: **Libre Baskerville** (títulos) e **Inter** (texto). El texto base es de 18 px (1.125 rem).
+// Componentes reutilizables
+.boton
+.tarjeta
+.tarjeta-vacante
+.solicitud
+.vacante-empresa
+.campo-formulario
+.campo-casilla
+.grupo-campos
+.etiqueta-estatus
+.encabezado
+.nav-principal
+.nav-inferior
+.pie
+.buscador
 
-## Componentes reutilizables identificados
 
-_(se completa al terminar los componentes)_
+// Capturas
+index.html en celular y escritorio, puntaje de Lighthouse
 
-## Capturas
-
-_(index.html en celular y escritorio, y puntaje de Lighthouse – Accessibility)_
-
-## Sitio publicado
-
-_(URL de Vercel)_
+// Sitio publicado
+https://amac-web-one.vercel.app/
