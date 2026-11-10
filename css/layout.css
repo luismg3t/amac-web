@@ -367,3 +367,52 @@
     grid-row: 1;
   }
 }
+
+.tarjeta-centrada {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 35rem;
+  margin-inline: auto;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.tarjeta-centrada__pregunta {
+  font-weight: 700;
+}
+
+.tarjeta-centrada--amplia {
+  max-width: 47.5rem;
+}
+
+.formulario--largo {
+  gap: var(--espacio-xl);
+}
+
+.cuadricula-formulario {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .cuadricula-formulario {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cuadricula-formulario .campo-formulario--ancho {
+    grid-column: 1 / -1;
+  }
+}
