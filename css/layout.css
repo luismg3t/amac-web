@@ -367,3 +367,22 @@
     grid-row: 1;
   }
 }
+
+.tarjeta-centrada {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 35rem;
+  margin-inline: auto;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.tarjeta-centrada__pregunta {
+  font-weight: 700;
+}
