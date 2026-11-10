@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión | AMAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__interior">
+      <a class="encabezado__logo" href="index.html">
+        <img src="img/logo-amac.svg" alt="AMAC asociAMayores, ir al inicio">
+      </a>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Vacantes</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li><a href="login.html" aria-current="page">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+      <a class="boton boton--ayuda" href="tel:+528100000000" aria-label="Ayuda: llamar a AMAC">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <span>Ayuda</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="principal" class="contenido contenedor">
+    <section class="tarjeta tarjeta--formulario tarjeta-centrada" aria-labelledby="titulo-login">
+      <h1 id="titulo-login">Iniciar sesión</h1>
+      <p class="introduccion">Escribe tu correo y tu contraseña.</p>
+
+      <form class="formulario" action="mis-solicitudes.html">
+        <div class="campo-formulario">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" autocomplete="email" placeholder="nombre@correo.com" required>
+        </div>
+        <div class="campo-formulario">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" name="contrasena" autocomplete="current-password" required>
+          <p class="campo-formulario__ayuda">Escribe la contraseña que elegiste al crear tu cuenta.</p>
+        </div>
+        <a class="boton boton--primario boton--bloque" href="mis-solicitudes.html">Entrar</a>
+      </form>
+
+      <p class="tarjeta-centrada__pregunta">¿Aún no tienes cuenta?</p>
+      <a class="boton boton--secundario boton--bloque" href="registro-candidato.html">Crear cuenta de candidato</a>
+    </section>
+  </main>
+
+  <footer class="pie fondo-oscuro">
+    <div class="pie__interior">
+      <div class="pie__datos">
+        <p class="pie__nombre">asociAMayores A.C.</p>
+        <address>Amatista 107<br>San Pedro Garza García, N.L.</address>
+        <a href="mailto:contacto@somosamac.org">contacto@somosamac.org</a>
+        <a href="#">Aviso de privacidad</a>
+      </div>
+      <nav class="pie__nav" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="index.html">Vacantes</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="https://somosamac.org">Quiero donar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <nav class="nav-inferior" aria-label="Navegación móvil">
+    <ul>
+      <li>
+        <a href="index.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+          <span>Vacantes</span>
+        </a>
+      </li>
+      <li>
+        <a href="mis-solicitudes.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          <span>Mis solicitudes</span>
+        </a>
+      </li>
+      <li>
+        <a href="login.html" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          <span>Iniciar sesión</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>
