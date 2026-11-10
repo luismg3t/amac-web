@@ -293,6 +293,7 @@
     width: auto;
   }
 }
+<<<<<<< HEAD
 
 .contenido > .boton {
   align-self: flex-start;
@@ -367,3 +368,5 @@
     grid-row: 1;
   }
 }
+=======
+>>>>>>> 5a0ab10fe0d4592cf6bd149370ea57c24010eaca
