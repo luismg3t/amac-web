@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacantes disponibles | AMAC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__interior">
+      <a class="encabezado__logo" href="index.html">
+        <img src="img/logo-amac.svg" alt="AMAC asociAMayores, ir al inicio">
+      </a>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Vacantes</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+      <a class="boton boton--ayuda" href="tel:+528100000000" aria-label="Ayuda: llamar a AMAC">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <span>Ayuda</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="principal" class="contenido contenedor">
+    <h1>Encuentra tu próximo empleo</h1>
+    <p class="introduccion">Escribe el puesto que buscas y toca el botón “Buscar vacantes”.</p>
+
+    <form class="buscador tarjeta tarjeta--compacta" role="search" aria-label="Buscar vacantes" action="index.html">
+      <div class="buscador__campos">
+        <div class="campo-formulario campo-formulario--ancho">
+          <label for="busqueda">¿Qué trabajo buscas?</label>
+          <input type="search" id="busqueda" name="busqueda" placeholder="Ejemplo: cajero, chofer" autocomplete="off">
+        </div>
+        <div class="campo-formulario">
+          <label for="horario">Horario</label>
+          <select id="horario" name="horario">
+            <option value="">Todos los horarios</option>
+            <option value="matutino">Matutino</option>
+            <option value="vespertino">Vespertino</option>
+            <option value="mixto">Mixto</option>
+          </select>
+        </div>
+        <div class="campo-formulario">
+          <label for="categoria">Categoría</label>
+          <select id="categoria" name="categoria">
+            <option value="">Todas las categorías</option>
+            <option value="almacen">Almacén</option>
+            <option value="transporte">Transporte</option>
+            <option value="ventas">Ventas</option>
+            <option value="atencion">Atención al cliente</option>
+            <option value="seguridad">Seguridad</option>
+            <option value="cocina">Cocina</option>
+          </select>
+        </div>
+        <button class="boton boton--primario" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg><span>Buscar vacantes</span></button>
+      </div>
+    </form>
+
+    <section class="resultados" aria-label="Resultados de la búsqueda">
+      <p class="resultados__cantidad">Mostrando 6 vacantes</p>
+      <ul class="lista-vacantes">
+        <li>
+          <article class="tarjeta-vacante">
+            <h2 class="tarjeta-vacante__titulo">Auxiliar de almacén</h2>
+            <ul class="tarjeta-vacante__datos">
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg><span>Empresa: Comercial Norte</span></li>
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span>Ciudad: Monterrey, N.L.</span></li>
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg><span>Horario: Matutino</span></li>
+              <li class="tarjeta-vacante__dato tarjeta-vacante__dato--destacado"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg><span>Sueldo: $9,500 al mes</span></li>
+            </ul>
+            <a class="boton boton--primario boton--bloque" href="vacante.html">Ver vacante<span class="visualmente-oculto"> de Auxiliar de almacén</span></a>
+          </article>
+        </li>
+        <li>
+          <article class="tarjeta-vacante">
+            <h2 class="tarjeta-vacante__titulo">Chofer repartidor</h2>
+            <ul class="tarjeta-vacante__datos">
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg><span>Empresa: Distribuidora Regia</span></li>
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span>Ciudad: San Nicolás, N.L.</span></li>
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg><span>Horario: Mixto</span></li>
+              <li class="tarjeta-vacante__dato tarjeta-vacante__dato--destacado"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg><span>Sueldo: $11,000 al mes</span></li>
+            </ul>
+            <a class="boton boton--primario boton--bloque" href="vacante.html">Ver vacante<span class="visualmente-oculto"> de Chofer repartidor</span></a>
+          </article>
+        </li>
+        <li>
+          <article class="tarjeta-vacante">
+            <h2 class="tarjeta-vacante__titulo">Cajero de tienda</h2>
+            <ul class="tarjeta-vacante__datos">
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg><span>Empresa: Súper La Esquina</span></li>
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span>Ciudad: Guadalupe, N.L.</span></li>
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg><span>Horario: Vespertino</span></li>
+              <li class="tarjeta-vacante__dato tarjeta-vacante__dato--destacado"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg><span>Sueldo: $8,800 al mes</span></li>
+            </ul>
+            <a class="boton boton--primario boton--bloque" href="vacante.html">Ver vacante<span class="visualmente-oculto"> de Cajero de tienda</span></a>
+          </article>
+        </li>
+        <li>
+          <article class="tarjeta-vacante">
+            <h2 class="tarjeta-vacante__titulo">Recepcionista</h2>
+            <ul class="tarjeta-vacante__datos">
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg><span>Empresa: Clínica Santa Rosa</span></li>
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span>Ciudad: San Pedro, N.L.</span></li>
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg><span>Horario: Matutino</span></li>
+              <li class="tarjeta-vacante__dato tarjeta-vacante__dato--destacado"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg><span>Sueldo: $10,200 al mes</span></li>
+            </ul>
+            <a class="boton boton--primario boton--bloque" href="vacante.html">Ver vacante<span class="visualmente-oculto"> de Recepcionista</span></a>
+          </article>
+        </li>
+        <li>
+          <article class="tarjeta-vacante">
+            <h2 class="tarjeta-vacante__titulo">Vigilante de día</h2>
+            <ul class="tarjeta-vacante__datos">
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg><span>Empresa: Seguridad Cumbres</span></li>
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span>Ciudad: Monterrey, N.L.</span></li>
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg><span>Horario: Matutino</span></li>
+              <li class="tarjeta-vacante__dato tarjeta-vacante__dato--destacado"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg><span>Sueldo: $9,000 al mes</span></li>
+            </ul>
+            <a class="boton boton--primario boton--bloque" href="vacante.html">Ver vacante<span class="visualmente-oculto"> de Vigilante de día</span></a>
+          </article>
+        </li>
+        <li>
+          <article class="tarjeta-vacante">
+            <h2 class="tarjeta-vacante__titulo">Ayudante de cocina</h2>
+            <ul class="tarjeta-vacante__datos">
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg><span>Empresa: Restaurante El Fogón</span></li>
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span>Ciudad: Apodaca, N.L.</span></li>
+              <li class="tarjeta-vacante__dato"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg><span>Horario: Vespertino</span></li>
+              <li class="tarjeta-vacante__dato tarjeta-vacante__dato--destacado"><svg class="tarjeta-vacante__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg><span>Sueldo: $8,500 al mes</span></li>
+            </ul>
+            <a class="boton boton--primario boton--bloque" href="vacante.html">Ver vacante<span class="visualmente-oculto"> de Ayudante de cocina</span></a>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pie fondo-oscuro">
+    <div class="pie__interior">
+      <div class="pie__datos">
+        <p class="pie__nombre">asociAMayores A.C.</p>
+        <address>Amatista 107<br>San Pedro Garza García, N.L.</address>
+        <a href="mailto:contacto@somosamac.org">contacto@somosamac.org</a>
+        <a href="#">Aviso de privacidad</a>
+      </div>
+      <nav class="pie__nav" aria-label="Enlaces del pie de página">
+        <ul>
+          <li><a href="index.html">Vacantes</a></li>
+          <li><a href="mis-solicitudes.html">Mis solicitudes</a></li>
+          <li><a href="login.html">Iniciar sesión</a></li>
+          <li><a href="https://somosamac.org">Quiero donar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <nav class="nav-inferior" aria-label="Navegación móvil">
+    <ul>
+      <li>
+        <a href="index.html" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+          <span>Vacantes</span>
+        </a>
+      </li>
+      <li>
+        <a href="mis-solicitudes.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          <span>Mis solicitudes</span>
+        </a>
+      </li>
+      <li>
+        <a href="login.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          <span>Iniciar sesión</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>
