@@ -293,3 +293,77 @@
     width: auto;
   }
 }
+
+.contenido > .boton {
+  align-self: flex-start;
+}
+
+.introduccion--grande {
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-subtitulo);
+  line-height: var(--interlineado-titulos);
+}
+
+.detalle-vacante {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-l);
+}
+
+.detalle-vacante__resumen,
+.detalle-vacante__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+}
+
+.detalle-vacante__info {
+  gap: var(--espacio-l);
+}
+
+.detalle-vacante__info .tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-s);
+}
+
+.detalle-vacante__sueldo {
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-subtitulo);
+  line-height: var(--interlineado-titulos);
+}
+
+.detalle-vacante__datos,
+.lista-detalle {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-texto-suave);
+}
+
+.lista-detalle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+  padding-left: var(--espacio-l);
+  list-style: disc;
+  color: var(--color-texto);
+}
+
+@media (min-width: 1024px) {
+  .detalle-vacante {
+    grid-template-columns: minmax(0, 1fr) 27.5rem;
+    align-items: start;
+    gap: var(--espacio-xl);
+  }
+
+  .detalle-vacante__info {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .detalle-vacante__resumen {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
