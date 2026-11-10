@@ -1,40 +1,30 @@
-/* ==========================================================
-   variables.css — Design tokens tomados del prototipo de Figma
-   Todo valor de color, tipografía, espaciado y borde vive aquí.
-   Si algo cambia en Figma, se cambia solo en este archivo.
-   ========================================================== */
-
 :root {
-  /* ---------- Colores (hex de las variables de Figma) ---------- */
-  --color-primario: #1f2a4a;          /* azul marino AMAC: botones, nav, texto fuerte */
-  --color-primario-oscuro: #141c33;   /* hover de botones azul marino */
-  --color-acento: #ff7f5c;            /* coral AMAC: botón principal y de ayuda */
-  --color-acento-oscuro: #ff6b42;     /* hover del coral (texto azul marino: 5:1) */
-  --color-texto: #1b2440;             /* texto principal */
-  --color-texto-suave: #3f4660;       /* texto secundario (7.8:1 sobre el gris de fondo) */
-  --color-fondo: #ffffff;             /* tarjetas, encabezado, campos */
-  --color-superficie: #ebebeb;        /* fondo de la página */
-  --color-borde: #6b7285;             /* bordes de campos y tarjetas (4.8:1 sobre blanco) */
-  --color-exito: #1b6b3a;             /* estatus "Aceptada" */
-  --color-error: #b3261e;             /* mensajes de error */
+  --color-primario: #1f2a4a;
+  --color-primario-oscuro: #141c33;
+  --color-acento: #ff7f5c;
+  --color-acento-oscuro: #ff6b42;
+  --color-texto: #1b2440;
+  --color-texto-suave: #3f4660;
+  --color-fondo: #ffffff;
+  --color-superficie: #ebebeb;
+  --color-borde: #6b7285;
+  --color-exito: #1b6b3a;
+  --color-error: #b3261e;
   --color-blanco: #ffffff;
-  --color-foco: var(--color-primario);/* anillo de foco con el teclado */
+  --color-foco: var(--color-primario);
 
-  /* ---------- Tipografía ---------- */
   --fuente-base: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --fuente-titulos: "Libre Baskerville", Georgia, "Times New Roman", serif;
 
-  /* Tamaños en rem (1rem = 16 px, escalan con el navegador) */
-  --texto-base: 1.125rem;       /* 18 px: mínimo permitido en todo el sitio */
-  --texto-boton: 1.25rem;       /* 20 px */
-  --texto-subtitulo: 1.375rem;  /* 22 px */
-  --texto-h2: 1.625rem;         /* 26 px */
-  --texto-h1-movil: 1.75rem;    /* 28 px */
-  --texto-h1: 2.25rem;          /* 36 px */
+  --texto-base: 1.125rem;
+  --texto-boton: 1.25rem;
+  --texto-subtitulo: 1.375rem;
+  --texto-h2: 1.625rem;
+  --texto-h1-movil: 1.75rem;
+  --texto-h1: 2.25rem;
   --interlineado-base: 1.5;
   --interlineado-titulos: 1.3;
 
-  /* ---------- Espaciados (escala de Figma: 8, 12, 16, 24, 32, 48, 64, 80 px) ---------- */
   --espacio-xs: 0.5rem;
   --espacio-s: 0.75rem;
   --espacio-m: 1rem;
@@ -44,16 +34,11 @@
   --espacio-3xl: 4rem;
   --espacio-4xl: 5rem;
 
-  /* ---------- Bordes y radios ---------- */
   --borde-grosor: 2px;
-  --radio-campo: 0.5rem;     /* 8 px */
-  --radio-boton: 0.75rem;    /* 12 px */
-  --radio-tarjeta: 1rem;     /* 16 px */
+  --radio-campo: 0.5rem;
+  --radio-boton: 0.75rem;
+  --radio-tarjeta: 1rem;
 
-  /* ---------- Medidas ---------- */
-  --altura-toque: 3.5rem;    /* 56 px: botones y campos (mínimo exigido: 44 px) */
-  --ancho-contenedor: 80rem; /* 1280 px: el escritorio de Figma (1440 - 2 x 80) */
-
-  /* Puntos de quiebre (las media queries no aceptan variables, se anotan aquí):
-     tablet: 768px  ·  escritorio: 1024px */
+  --altura-toque: 3.5rem;
+  --ancho-contenedor: 80rem;
 }
