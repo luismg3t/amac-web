@@ -417,7 +417,8 @@
   }
 }
 
-.lista-solicitudes {
+.lista-solicitudes,
+.lista-vacantes-empresa {
   display: flex;
   flex-direction: column;
   gap: var(--espacio-m);
@@ -426,57 +427,96 @@
   list-style: none;
 }
 
-.solicitud {
+.solicitud,
+.vacante-empresa {
   display: flex;
   flex-direction: column;
   gap: var(--espacio-m);
 }
 
-.solicitud__datos {
+.solicitud__datos,
+.vacante-empresa__datos {
   display: flex;
   flex-direction: column;
   gap: var(--espacio-xs);
 }
 
-.solicitud__titulo {
+.solicitud__titulo,
+.vacante-empresa__titulo {
   font-size: var(--texto-subtitulo);
 }
 
-.solicitud__detalle {
+.solicitud__detalle,
+.vacante-empresa__detalle {
   color: var(--color-texto-suave);
 }
 
-.solicitud__acciones {
+.solicitud__acciones,
+.vacante-empresa__acciones {
   display: flex;
   flex-direction: column;
   gap: var(--espacio-s);
 }
 
-.solicitud__botones {
+.solicitud__botones,
+.vacante-empresa__botones {
   display: flex;
   flex-direction: column;
   gap: var(--espacio-s);
 }
 
 @media (min-width: 768px) {
-  .solicitud {
+  .solicitud,
+  .vacante-empresa {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: var(--espacio-l);
   }
 
-  .solicitud__datos {
+  .solicitud__datos,
+  .vacante-empresa__datos {
     flex: 1;
   }
 
-  .solicitud__acciones {
+  .solicitud__acciones,
+  .vacante-empresa__acciones {
     align-items: flex-end;
   }
 }
 
 @media (min-width: 1024px) {
-  .solicitud__botones {
+  .solicitud__botones,
+  .vacante-empresa__botones {
     flex-direction: row;
+  }
+}
+
+.encabezado-pagina {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+}
+
+.encabezado-pagina__titulos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+}
+
+.encabezado-pagina .boton {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .encabezado-pagina {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--espacio-l);
+  }
+
+  .encabezado-pagina .boton {
+    width: auto;
   }
 }
