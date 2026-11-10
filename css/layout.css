@@ -164,6 +164,9 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--espacio-l);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 @media (min-width: 768px) {
@@ -225,5 +228,68 @@
 @media (min-width: 1280px) {
   .encabezado__logo {
     flex-basis: 18.2rem;
+  }
+}
+
+.lista-vacantes > li {
+  display: flex;
+}
+
+.lista-vacantes .tarjeta-vacante {
+  flex: 1;
+}
+
+.introduccion {
+  color: var(--color-texto-suave);
+}
+
+.buscador__campos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-m);
+}
+
+.buscador__campos .boton {
+  width: 100%;
+}
+
+.resultados {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+}
+
+.resultados__cantidad {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .buscador__campos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .buscador__campos .campo-formulario--ancho,
+  .buscador__campos .boton {
+    grid-column: 1 / -1;
+  }
+
+  .resultados {
+    gap: var(--espacio-l);
+  }
+}
+
+@media (min-width: 1024px) {
+  .buscador__campos {
+    grid-template-columns: repeat(3, 1fr) auto;
+    align-items: end;
+  }
+
+  .buscador__campos .campo-formulario--ancho,
+  .buscador__campos .boton {
+    grid-column: auto;
+  }
+
+  .buscador__campos .boton {
+    width: auto;
   }
 }
