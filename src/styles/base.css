@@ -24,6 +24,10 @@ body {
   background: var(--color-superficie);
 }
 
+#root {
+  display: contents;
+}
+
 main {
   flex: 1;
 }
