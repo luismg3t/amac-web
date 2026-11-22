@@ -42,6 +42,18 @@ src/styles/ -- variables.css, base.css, layout.css, componentes.css
 /empresa/vacantes/:id/solicitudes -- Solicitudes recibidas -- Empresa
 
 
+// Diagrama de arquitectura
+```mermaid
+flowchart LR
+    U[Usuario: candidato, empresa o admin] -->|navegador| V[Vercel: sitio estático de React + Vite]
+    V -->|supabase-js con VITE_SUPABASE_URL y VITE_SUPABASE_PUBLISHABLE_KEY| A[Supabase Auth: registro, inicio y cierre de sesión]
+    V -->|consultas con la sesión del usuario| D[(Supabase PostgreSQL: perfiles, vacantes, solicitudes)]
+    A -->|trigger al_crear_usuario| D
+    D --- R[Row Level Security: decide qué puede leer y modificar cada rol]
+    G[GitHub: luismg3t/amac-web] -->|cada push a main despliega| V
+```
+
+
 // Base de datos
 perfiles -- id, rol (candidato, empresa o admin), nombre, telefono, edad, colonia, experiencia, giro, aprobado
 vacantes -- id, empresa_id, titulo, sueldo, ubicacion, horario, categoria, descripcion, requisitos, prestaciones, telefono_contacto, estado (activa, pausada o cerrada)
@@ -51,6 +63,44 @@ auth.users 1 a 1 perfiles (el trigger al_crear_usuario crea el perfil al registr
 perfiles 1 a muchos vacantes (la empresa publica)
 perfiles 1 a muchos solicitudes (el candidato se postula)
 vacantes 1 a muchos solicitudes
+
+```mermaid
+erDiagram
+    AUTH_USERS ||--|| PERFILES : "crea (trigger al_crear_usuario)"
+    PERFILES ||--o{ VACANTES : "empresa publica"
+    PERFILES ||--o{ SOLICITUDES : "candidato envía"
+    VACANTES ||--o{ SOLICITUDES : "recibe"
+
+    PERFILES {
+        uuid id PK
+        text rol
+        text nombre
+        text telefono
+        int edad
+        text colonia
+        text experiencia
+        text giro
+        boolean aprobado
+    }
+    VACANTES {
+        bigint id PK
+        uuid empresa_id FK
+        text titulo
+        numeric sueldo
+        text ubicacion
+        text horario
+        text categoria
+        text estado
+        text telefono_contacto
+    }
+    SOLICITUDES {
+        bigint id PK
+        bigint vacante_id FK
+        uuid candidato_id FK
+        text estatus
+        timestamptz creada_en
+    }
+```
 
 Una persona solo puede postularse una vez a cada vacante: unique (vacante_id, candidato_id)
 
@@ -62,6 +112,15 @@ La llave service_role / secret key no está en el código ni en el repositorio
 Las contraseñas y sesiones las maneja Supabase Auth
 Nadie puede registrarse como admin; ese rol se asigna a mano
 Un candidato nuevo queda con aprobado = false y no puede postularse hasta que AMAC lo apruebe
+
+Trigger y funciones (supabase/esquema.sql):
+crear_perfil() + trigger al_crear_usuario -- crea la fila en perfiles al registrarse; solo acepta candidato o empresa
+mi_rol() -- rol del usuario en sesión
+candidato_aprobado() -- verdadero si el candidato está aprobado
+candidato_aplico(vid) -- verdadero si el usuario se postuló a la vacante
+empresa_ve_candidato(cid) -- verdadero si el candidato se postuló a una vacante de la empresa
+vacante_es_mia(vid) -- verdadero si la vacante es de la empresa en sesión
+vacante_activa(vid) -- verdadero si la vacante está activa
 
 Políticas RLS (activas en las tres tablas, nadie puede borrar filas desde la API):
 perfiles -- cada usuario lee y edita su propio perfil (sin poder cambiar rol ni aprobado); los perfiles de empresa son públicos; la empresa ve a los candidatos que se postularon a sus vacantes
