@@ -1,12 +1,5 @@
-AMAC Proyecto Final Entrega 3 (React, Supabase y Vercel)
-
 // Sitio publicado
 https://amac-web-one.vercel.app/
-
-// Repositorio
-https://github.com/luismg3t/amac-web
-La Entrega 2 (HTML y CSS) se conserva en la rama entrega-2
-
 
 // Integrantes y qué hizo cada uno
 
