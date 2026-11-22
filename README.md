@@ -3,7 +3,7 @@ https://amac-web-one.vercel.app/
 
 // Video de la presentación y diapositivas
 - Video: (pegar enlace)
-- Diapositivas: (pegar enlace o PDF)
+
 
 
 // Integrantes y qué hizo cada uno
