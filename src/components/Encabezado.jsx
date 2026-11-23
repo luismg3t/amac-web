@@ -24,7 +24,7 @@ export default function Encabezado() {
             ))}
           </ul>
         </nav>
-        <a className="boton boton--ayuda" href={`tel:${TELEFONO_AYUDA}`} aria-label="Ayuda: llamar a AMAC">
+        <a className="boton boton--ayuda boton--flotante" href={`tel:${TELEFONO_AYUDA}`} aria-label="Ayuda: llamar a AMAC">
           <Icono nombre="telefono" />
           <span>Ayuda</span>
         </a>
