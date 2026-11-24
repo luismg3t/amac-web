@@ -2,7 +2,7 @@
 https://amac-web-one.vercel.app/
 
 // Video de la presentación y diapositivas
-- Video: (pegar enlace)
+- Video: 
 
 
 
@@ -23,7 +23,7 @@ https://amac-web-one.vercel.app/
 
 // Tecnologías
 - Interfaz: React 19, React Router 7 y Vite
-- Estilos: CSS propio de la Entrega 2 (src/styles/), sin frameworks
+- Estilos: CSS propio (src/styles/)
 - Backend: Supabase (PostgreSQL, Auth y Row Level Security)
 - Despliegue: Vercel conectado a GitHub, con HTTPS
 
