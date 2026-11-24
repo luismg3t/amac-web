@@ -195,7 +195,3 @@ Tipografías: Libre Baskerville para títulos e Inter para texto. El texto base 
 // Componentes reutilizables
 .boton, .tarjeta, .tarjeta-vacante, .solicitud, .vacante-empresa, .campo-formulario, .campo-casilla, .grupo-campos, .etiqueta-estatus, .encabezado, .nav-principal, .nav-inferior, .pie, .buscador
 
-
-// Capturas
-- docs/capturas/ -- validador de la Entrega 2
-- Pendiente: capturas de la Entrega 3 en celular y escritorio, y puntaje de Lighthouse (Accesibilidad ≥ 90)
