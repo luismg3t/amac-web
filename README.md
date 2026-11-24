@@ -2,7 +2,7 @@
 https://amac-web-one.vercel.app/
 
 // Video de la presentación y diapositivas
-- Video: 
+- Video: https://drive.google.com/drive/folders/1ST3Sp2St8DymfZZJd5VbEKEXcugCxb88
 
 
 
