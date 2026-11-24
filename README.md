@@ -17,7 +17,7 @@ https://amac-web-one.vercel.app/
 // Cuentas de prueba
 
 - Candidato aprobado -- correo: juliogomezw07@gmail.com -- contraseña: 12345678
-- Candidato sin aprobar -- correo: juliogoomezw@udem.edu -- contraseña: 123abcde
+- Candidato sin aprobar -- correo: juliogomezw@udem.edu -- contraseña: 123abcde
 - Empresa -- correo: adriana.reynac@gmail.com -- contraseña: 12345678
 
 
